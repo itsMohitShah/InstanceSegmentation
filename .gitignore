@@ -183,3 +183,5 @@ cython_debug/
 *.pptx
 *.7z
 *.zip
+*.ply
+*.json

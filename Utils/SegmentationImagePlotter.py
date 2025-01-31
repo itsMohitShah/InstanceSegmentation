@@ -1,6 +1,6 @@
 import os
 import matplotlib.pyplot as plt
-import tqdm
+from tqdm import tqdm
 import numpy as np
 
 
@@ -12,10 +12,6 @@ def inspect_segmentationmask(mask_FW, rgb_FW,colors):
         mask = np.load(mask_FW.roots[idx])
         rgb = plt.imread(rgb_FW.roots[idx])
 
-        # print(mask.shape)
-        # print(bbox3d.shape)
-        # print(pc.shape)
-        # print(rgb.shape)
         numofinstances = mask.shape[0]
         try:
             dict_numofinstances[numofinstances] += 1

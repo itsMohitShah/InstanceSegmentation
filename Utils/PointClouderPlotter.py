@@ -1,6 +1,6 @@
 import os
 import matplotlib.pyplot as plt
-import tqdm
+from tqdm import tqdm
 import numpy as np
 
 def inspect_pc(pc_FW, mask_FW, rgb_FW):
@@ -31,6 +31,6 @@ def inspect_pc(pc_FW, mask_FW, rgb_FW):
         plt.subplot(2,3,6)
         plt.imshow(pc[2,:,:])
         plt.axis('off')
-        # plt.show()
-        plt.savefig(os.path.join(path_imgwithpc,f'ID{str(idx).zfill(3)}--PC--{numofinstances}instances.png'), bbox_inches='tight')
+        plt.show()
+        # plt.savefig(os.path.join(path_imgwithpc,f'ID{str(idx).zfill(3)}--PC--{numofinstances}instances.png'), bbox_inches='tight')
         plt.close()

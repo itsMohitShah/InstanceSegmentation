@@ -9,7 +9,7 @@ import os
 while True:
     window = tk.Tk()
     window.withdraw()
-    path = tk.filedialog.askopenfilename()
+    path = tk.filedialog.askopenfilename(filetypes = [("Point Cloud Files", "*.ply")])
     if path == "":
         break
     pcd = o3d.io.read_point_cloud(path)
